@@ -25,3 +25,16 @@ create table article (
     foreign key (categoryId) references category(categoryId),
     foreign key (username) references user(username)
 );
+
+create table comment (
+    commentId int AUTO_INCREMENT primary key,
+    context text,
+    creation_date date,
+    articleId int,
+    username VARCHAR(50),
+
+    Foreign Key (articleId) REFERENCES article(articleId),
+    Foreign Key (username) REFERENCES user(username)
+);
+
+/* insert data */
