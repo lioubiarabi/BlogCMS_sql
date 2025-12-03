@@ -7,3 +7,8 @@ create table user (
     password varchar(50) not null,
     auther boolean not null
 );
+
+create table category (
+    categoryId int auto_increment primary key,
+    name varchar(50) not null
+);
