@@ -16,3 +16,18 @@ update article
     where status = 'brouillon'
     	and Year(creation_date) < 2024;
 
+-- 5. WHERE - Filtrage temporel
+select * from article
+	where creation_date > '2024-12-01';
+
+-- 6. ORDER BY - Tri chronologique
+select * from article
+	order by creation_date;
+    
+-- 7. LIMIT - Articles récents
+    
+select * from article
+	order by creation_date desc
+    limit 5;
+
+-- 8. DISTINCT - Rôles uniques
